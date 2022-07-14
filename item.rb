@@ -1,4 +1,6 @@
 # Item class definition
+require './genre'
+
 class Item
   attr_reader :id, :genre, :author, :source, :label, :publish_date
 
@@ -12,19 +14,20 @@ class Item
     @archived = false
   end
 
-  def genre_setter=(_genre)
+  def genre=(genre)
+    @genre = genre
     @genre.items << self unless @genre.items.include?(self)
   end
 
-  def author_setter=(_author)
+  def author=(_author)
     @author.items << self unless @author.items.include?(self)
   end
 
-  def source_setter=(_source)
+  def source=(_source)
     @source.items << self unless @source.items.include?(self)
   end
 
-  def label_setter=(_label)
+  def label=(_label)
     @label.items << self unless @label.items.include?(self)
   end
 
