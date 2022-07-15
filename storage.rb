@@ -31,6 +31,14 @@ class Storage
     music_file.close
   end
 
+  def save_movie(app)
+    return unless File.file?('movies.json')
+
+    movie_file = File.open('movies.json', 'w')
+    movie_file.write(JSON.generate(app.movies))
+    movie_file.close
+  end
+
   def save_game(app)
     return unless File.file?('games.json')
 
@@ -45,6 +53,7 @@ class Storage
     load_book(app)
     load_music(app)
     load_games(app)
+    load_movie(app)
   end
 
   def load_book(app)
@@ -68,12 +77,12 @@ class Storage
     music_file.close
   end
 
-  def load_movies(app)
+  def load_movie(app)
     return unless File.file?('movies.json')
     return if File.zero?('movies.json')
 
     movie_file = File.open('movies.json', 'r')
-    movie_list = JSON.parse(music_file.read)
+    movie_list = JSON.parse(movie_file.read)
     movie_list.each { |movie| app.create_movie(Movie.new(silet: movie['silet'])) }
     movie_file.close
   end
