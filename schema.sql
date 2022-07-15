@@ -54,3 +54,16 @@ CREATE TABLE games (
     last_played_at DATE,
     FOREIGN KEY(id) REFERENCES item(id)
 );
+
+CREATE TABLE movies(
+  id INT,
+  silent BOOLEAN,
+  source_id SERIAL,
+  FOREIGN KEY(source_id) REFERENCES sources.id
+);
+
+CREATE TABLE sources(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(255)
+  PRIMARY KEY(id)
+);
