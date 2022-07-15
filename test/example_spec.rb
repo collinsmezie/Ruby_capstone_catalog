@@ -69,16 +69,21 @@
 
 # require 'date'
 
-# time = Time.new
-# time1 = Date.parse "01/06/2016"
-# date1 = time.strftime("%d/%m/%Y")
-# date2 = time1.strftime("%d/%m/%Y")
-# p date1.to_i
-# p date2
-# p "Period #{time.strftime("%d/%m/%Y")} to #{time1.strftime("%d/%m/%Y")}"
+#  time = Time.new
+# times = time.strftime("%d/%m/%Y")
 
-# (time..time1).each do |date|
-#   p date.strftime("%d/%m/%Y")
+# date1 = Date.parse "01/06/2016"
+# dates = date1.strftime("%d/%m/%Y")
+# p dates.to_i
+# p dates
+
+#  "Period #{date1.strftime("%d/%m/%Y")} to #{date2.strftime("%d/%m/%Y")}"
+
+# (dates..times).each do |date|
+#    date
+# end
+# (date1...date2).each do |date|
+#   p date
 # end
 
 # musics = [
@@ -94,3 +99,42 @@
 #   [5, 10, 15, 20, 25, 30].each_with_index do |num, idx|
 #     puts "#{num} #{idx}"
 #   end
+
+# class NetworkProvider
+#   attr_accessor :name, :location, :constant_network
+#   attr_reader :users
+
+#   def initialize(name, location, constant_network: true)
+#     @name = name
+#     @location = location
+#     @constant_network = constant_network
+#     @users = []
+#   end
+
+#   def add_user(user)
+#     @users << user
+#     user.network_provider = self
+#   end
+# end
+
+# class User
+#   attr_accessor :name, :age, :date_of_birth
+#   attr_reader :network_provider
+
+#   def initialize(name, age, date_of_birth, network_provider)
+#     @name = name
+#     @age = age
+#     @date_of_birth = date_of_birth
+#     @network_provider = network_provider
+#   end
+
+#   def network_provider=(network_provider)
+#     @network_provider = network_provider
+#     network_provider.users << self
+#   end
+# end
+
+# user = User.new('Ekene', 12, '2020/09/07', 'mtn')
+
+# network_provider = Network_provider.new('mtn', 'Ikorodu')
+# p network_provider.add_user(user)

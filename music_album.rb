@@ -10,7 +10,10 @@ class MusicAlbum < Item
   end
 
   def can_be_archived?
-    @publish_date > 10 && on_spotify
+    current_year = Time.new.year
+    last_played_year = @publish_date.split('-')
+    last_played_at = current_year - last_played_year[0].to_i
+    last_played_at > 10 && on_spotify
   end
 end
 # rubocop: enable Metrics/ParameterLists
