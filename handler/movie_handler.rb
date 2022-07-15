@@ -2,21 +2,21 @@ require_relative '../model/movie'
 require_relative '../model/source'
 require_relative '../storage'
 
-class MusicHandler
+class MovieHandler
   @storage = Storage.new
-  def self.add_music(app)
-    print 'Is it on spotify? [Yes/No]: '
-    on_spotify = gets.chomp
-    music = Music.new(on_spotify: on_spotify)
-    app.create_music(music)
-    puts 'Music created successfully !!!'
-    @storage.save_music(app)
+  def self.add_movie(app)
+    print 'Is it silet? [Yes/No]: '
+    silet = gets.chomp
+    movie = Movie.new(silet: silet)
+    app.create_movie(movie)
+    puts 'Movie created successfully !!!'
+    @storage.save_movie(app)
   end
 
-  def self.list_musics(app)
-    puts 'This is all the musics we have : '
-    app.musics.each_with_index do |music, _index|
-      puts music.on_spotify.to_s
+  def self.list_movies(app)
+    puts 'This is all the movies we have : '
+    app.movies.each_with_index do |movie, _index|
+      puts movie.silet.to_s
     end
   end
 end

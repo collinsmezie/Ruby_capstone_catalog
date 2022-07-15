@@ -2,12 +2,13 @@ require './app'
 require './handler/book_handler'
 require './handler/music_handler'
 require './handler/game_handler'
+require './handler/movie_handler'
 class Input
   def self.check_input(input, app)
     case input
-    when 1..6
+    when 1..8
       list_data(input, app)
-    when 7..9
+    when 9..12
       add_data(input, app)
     when 0
       puts 'Goodbye!'
@@ -29,15 +30,23 @@ class Input
     when 3
       GameHandler.list_games(app)
     when 4
-      #  List all genres
-      puts 'Here is genres list: '
-      app.list_genres
+      #  List all movie
+      puts 'List all movies'
+      MovieHandler.list_movies(app)
     when 5
       puts 'List all labels'
       app.list_labels
     when 6
       puts 'List of authors'
       app.list_authors
+    when 7
+      #  List all genres
+      puts 'Here is genres list: '
+      app.list_genres
+    when 8
+      #  List all sources
+      puts 'Here is sources list: '
+      app.list_sources  
     else
       puts 'invalid input'
     end
@@ -45,15 +54,18 @@ class Input
 
   def self.add_data(input, app)
     case input
-    when 7
+    when 9
       #  Add a book
       BookHandler.add_book(app)
-    when 8
+    when 10
       #  Add a music album
       MusicHandler.add_music(app)
-    when 9
+    when 11
       #  Add a game
       GameHandler.add_game(app)
+    when 12
+       #  Add a movie
+       MovieHandler.add_movie(app) 
     else
       puts 'invalid input'
     end

@@ -1,5 +1,5 @@
 require_relative './item'
-class Genre
+class Source
   attr_reader :id, :items
   attr_accessor :name
 
@@ -17,6 +17,6 @@ class Genre
 
   def add_item(item)
     @items << item
-    item.genre = self
+    item.source = self
   end
 end

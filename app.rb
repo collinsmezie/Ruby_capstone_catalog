@@ -2,8 +2,10 @@ require './model/label'
 require './model/author'
 require './model/music'
 require './model/genre'
+require './model/source'
+require './model/movie'
 class App
-  attr_reader :genres, :authors, :labels, :books, :musics, :games
+  attr_reader :genres, :movies, :sources, :authors, :labels, :books, :musics, :games
 
   def initialize
     @genres = []
@@ -12,6 +14,8 @@ class App
     @books = []
     @musics = []
     @games = []
+    @sources = []
+    @movies = []
   end
 
   def populate_app
@@ -23,6 +27,12 @@ class App
               Genre.new(name: 'Reggae'), Genre.new(name: 'Rhumba'), Genre.new(name: 'Country'),
               Genre.new(name: 'Dance and Electronic'), Genre.new(name: 'Other')]
     genres.each { |genre| @genres.push(genre) }
+
+    sources = [Source.new(name: 'Comedy'), Source.new(name: 'Thriller'), Source.new(name: 'Pop'),
+        Source.new(name: 'Hip-hop and Rap'), Source.new(name: 'Rock'),
+        Source.new(name: 'Reggae'), Source.new(name: 'Rhumba'), Source.new(name: 'Country'),
+        Source.new(name: 'Dance and Electronic'), Source.new(name: 'Other')]
+    sources.each { |source| @sources.push(source) }
   end
 
   def populate_author
@@ -35,14 +45,30 @@ class App
     @musics << music
   end
 
+   # Add a movie
+   def create_movie(movie)
+    @movies << movie
+  end
+
   # Genre part
   def add_genre(item)
     @genres.add_item(item)
   end
 
+  # Source part
+  def add_source(item)
+    @sources.add_item(item)
+  end
+
   def list_genres
     @genres.each_with_index do |genre, index|
       puts "#{index}. ID: #{genre.id} Name: #{genre.name}"
+    end
+  end
+
+  def list_sources
+    @sources.each_with_index do |source, index|
+      puts "#{index}. ID: #{source.id} Name: #{source.name}"
     end
   end
 
