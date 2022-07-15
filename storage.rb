@@ -68,6 +68,16 @@ class Storage
     music_file.close
   end
 
+  def load_movies(app)
+    return unless File.file?('movies.json')
+    return if File.zero?('movies.json')
+
+    movie_file = File.open('movies.json', 'r')
+    movie_list = JSON.parse(music_file.read)
+    movie_list.each { |movie| app.create_movie(Movie.new(silet: movie['silet'])) }
+    movie_file.close
+  end
+
   def load_games(app)
     return unless File.file?('games.json')
     return if File.zero?('games.json')
