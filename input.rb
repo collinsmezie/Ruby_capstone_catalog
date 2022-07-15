@@ -46,7 +46,7 @@ class Input
     when 8
       #  List all sources
       puts 'Here is sources list: '
-      app.list_sources  
+      app.list_sources
     else
       puts 'invalid input'
     end
@@ -64,8 +64,8 @@ class Input
       #  Add a game
       GameHandler.add_game(app)
     when 12
-       #  Add a movie
-       MovieHandler.add_movie(app) 
+      #  Add a movie
+      MovieHandler.add_movie(app)
     else
       puts 'invalid input'
     end

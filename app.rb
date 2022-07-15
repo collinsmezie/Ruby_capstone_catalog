@@ -29,9 +29,9 @@ class App
     genres.each { |genre| @genres.push(genre) }
 
     sources = [Source.new(name: 'Comedy'), Source.new(name: 'Thriller'), Source.new(name: 'Pop'),
-        Source.new(name: 'Hip-hop and Rap'), Source.new(name: 'Rock'),
-        Source.new(name: 'Reggae'), Source.new(name: 'Rhumba'), Source.new(name: 'Country'),
-        Source.new(name: 'Dance and Electronic'), Source.new(name: 'Other')]
+               Source.new(name: 'Hip-hop and Rap'), Source.new(name: 'Rock'),
+               Source.new(name: 'Reggae'), Source.new(name: 'Rhumba'), Source.new(name: 'Country'),
+               Source.new(name: 'Dance and Electronic'), Source.new(name: 'Other')]
     sources.each { |source| @sources.push(source) }
   end
 
@@ -45,8 +45,8 @@ class App
     @musics << music
   end
 
-   # Add a movie
-   def create_movie(movie)
+  # Add a movie
+  def create_movie(movie)
     @movies << movie
   end
 

@@ -5,6 +5,7 @@ require_relative '../storage'
 class MovieHandler
   @storage = Storage.new
   def self.add_movie(app)
+    puts 'Please, create your movie : '
     print 'Is it silet? [Yes/No]: '
     silet = gets.chomp
     movie = Movie.new(silet: silet)
