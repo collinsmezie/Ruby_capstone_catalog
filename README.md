@@ -20,8 +20,7 @@
 
 ## Link to the video
 
-Video link
-
+/video/capstonevideo.mp4
 
 ## Getting Started
 
