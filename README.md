@@ -5,7 +5,6 @@
 ![catalog_of_my_things](https://user-images.githubusercontent.com/72297212/176618937-4c4a38d8-4e6b-4945-b3c6-7310c8e7f2a3.png)
 
 
-
 ## Built With
 
 ### Languages
@@ -69,7 +68,7 @@ Run ``` git clone https://github.com/ciraganenicole/ruby-capstone.git ``` in you
 👤 **Author2**
 
 - GitHub: [@ekenecf](https://github.com/ekenecf)
-- Twitter: [@ekenecf](https://twitter.com/kaitcham)
+- Twitter: [@ekenecf](https://twitter.com/ekene070)
 - LinkedIn: [@ekenecf](https://www.linkedin.com/in/nwachukwuekene/)
 
 👤 **Author3**
