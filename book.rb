@@ -1,7 +1,7 @@
 require './item'
 # rubocop: disable Metrics/ParameterLists
 
-#create Book class
+# create Book class
 class Book < Item
   attr_accessor :cover_state
 
