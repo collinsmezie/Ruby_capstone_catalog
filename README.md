@@ -20,7 +20,7 @@
 
 ## Link to the video
 
-/video/capstonevideo.mp4
+https://drive.google.com/file/d/1pWLa2lL-nvE2rTbIq67Cx2u60bFVd8CF/view?usp=sharing
 
 ## Getting Started
 
