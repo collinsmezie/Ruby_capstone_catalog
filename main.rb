@@ -11,7 +11,7 @@ def main
   storage.prepare_storage
   storage.load_data(app)
   options(app)
-  puts 'Thank you for using our service :)'
+  puts 'Catalog closed'
 end
 
 main

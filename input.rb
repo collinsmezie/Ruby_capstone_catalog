@@ -1,3 +1,4 @@
+# rubocop --auto-correct-all --disable-uncorrectable
 require './app'
 require './handler/book_handler'
 require './handler/music_handler'
@@ -18,7 +19,7 @@ class Input
     end
   end
 
-  def self.list_data(input, app)
+  def self.list_data(input, app) # rubocop:todo Metrics/CyclomaticComplexity
     case input
     when 1
       #   List all books
@@ -71,3 +72,4 @@ class Input
     end
   end
 end
+# rubocop enable: Metrics/CyclomaticComplexity:
