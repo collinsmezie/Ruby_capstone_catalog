@@ -6,10 +6,6 @@ describe Movie do
     @movie = Movie.new(silet: true)
   end
 
-  it 'should return true' do
-    expect(@movie.on_silet).to eq(true)
-  end
-
   it 'should return false' do
     expect(@movie.archived).to be(false)
   end
