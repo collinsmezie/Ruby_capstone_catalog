@@ -12,7 +12,7 @@ class Input
     when 9..12
       add_data(input, app)
     when 0
-      puts 'Goodbye!'
+      puts 'changes saved!'
       raise StopIteration
     else
       puts "You input #{input}"
